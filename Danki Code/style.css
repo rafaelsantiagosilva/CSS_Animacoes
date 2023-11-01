@@ -1,0 +1,45 @@
+@keyframes animacao{
+    /* Criando a animação */
+    0%{
+        background-color: purple;
+        width: 500px;
+    
+    }
+
+    50%{
+        background-color: yellow;
+        width: 700px;
+    }
+
+    100%{
+        background-color: green;
+        width: 1000px;
+    }
+
+    /* Tem como usar com from e to, indo de um ponto até outro */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 500px;
+    height: 500px;
+    background-color: purple;
+
+    /* Nome da animação */
+    animation: animacao;
+
+    /* Duração da animação */
+    animation-duration: 5s;
+
+    /* Vai começar depois de 2s */
+    animation-delay: 1s;
+
+    /* Quantas vezes vai se repetir */
+    animation-iteration-count: 2; /*Faz duas vezes*/
+    /* animation-iteration-count: infinite */
+}
