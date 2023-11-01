@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>001: Transform</title>
+    <style>
+        body {
+            display: grid;
+            height: 100vh;
+            place-items: center;
+        }
+
+        .box {
+            outline: 5px solid red;
+        }
+
+        /* TRANSFORM */
+        img {
+            /* Translate */
+            /*transform: translateX(100px);  Se deslocando 100px para a direita */
+            /*transform: translateY(-100px);  Deslocando 100px para cima */
+            /* Resumindo isso */
+            transform: translate(100px, -100px);
+
+            /* Scale */
+            transform: scale(2, 1.25);
+
+            /* Rotate */
+            transform: rotate(1.5turn); /* Rodando 1.5 voltas */
+            transform: rotate(90deg); /* Rodando 90 graus */
+
+            /* Skew */
+            transform: skew(20deg); /* Inclinando 20 graus */
+
+            /* Combinando */
+            transform: translateX(100px) scale(1.5) skewY(15deg) rotate(15deg);
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="https://cdn2.iconfinder.com/data/icons/world-flag-icons/256/Flag_of_Brazil.png" alt="">
+    </div>
+</body>
+
+</html>
