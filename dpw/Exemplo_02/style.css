@@ -1,0 +1,12 @@
+body{
+    animation: is-boucing 1s ease infinite alternate;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+@keyframes is-boucing {
+    to{
+        transform: translateY(30px);
+    }
+}
