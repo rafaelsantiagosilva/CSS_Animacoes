@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>003: Keyframes e Propriedades de animation</title>
+    <style>
+        body {
+            background-color: #DEB0CD;
+            background-image: url("https://th.bing.com/th/id/OIP.5MPnSN4rBC6F3eLHaxQM3gHaE7?pid=ImgDet&rs=1");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+        }
+
+        h1,
+        p {
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+        }
+
+        img {
+            width: 300px;
+            position: relative;
+            right: 300px;
+        }
+
+        img:hover {
+            cursor: grabbing;
+        }
+
+        /* Keyframes */
+        @keyframes fly {
+            0% {
+                transform: translateX(0px);
+            }
+
+            100% {
+                transform: translate(calc(200vw - 300px));
+            }
+        }
+
+        /* Propriedades animation */
+        img {
+            animation-name: fly;
+            animation-duration: 1.5s;
+
+            /* Suavização e intensidade em certos pontos da animação */
+            animation-timing-function: ease-in;
+
+            /* Quanto tempo demora para ocorrer a animação */
+            animation-delay: 1s;
+
+            /* Quantas vezes vai ocorrer */
+            animation-iteration-count: infinite;
+
+            /* Direção da animação */
+            animation-direction: reverse;
+            /* Vai de trás para frente */
+            animation-direction: alternate;
+            /* De frente para trás, de trás para frente */
+
+            /* Como ficará ao final da animação */
+            animation-fill-mode: backwards;
+            /* Final da tela */
+            animation-fill-mode: forwards;
+            /* Início da tela */
+            animation-fill-mode: both;
+            /* Ambos */
+
+            /* Shorthand */
+            animation: fly 1.5s ease-in-out infinite alternate;
+
+            /* Parada ou funcionando */
+            &:hover {
+                animation-play-state: paused;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>@Keyframes</h1>
+    <p>Em frames chave da animação, faça tal coisa. Pelo bem da performance, use transform e <em>opacity</em></p>
+    <div id="aviao">
+        <img src="https://prints.ultracoloringpages.com/1307e6cb638992218670f3b98e3ed309.png" alt="">
+    </div>
+</body>
+
+</html>
